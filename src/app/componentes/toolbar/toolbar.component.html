@@ -1,0 +1,39 @@
+<!--<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+    MENU
+  </button>
+  
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">MENU</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        I will not close if you click outside of me.
+      </div>
+    </div>
+  </div>-->
+
+  <div class="container">
+    <nav class="side-nav">
+      <ul class="nav-menu">
+
+        
+        <li class="nav-item"><a href="#"><i class="fas fa-tachometer-alt"></i><span class="menu-text">Dashboard</span></a>
+        
+        </li>
+        <li class="nav-item"><a href="#"><i class="fas fa-user"></i><span class="menu-text">Usuario</span></a></li>
+       <!--  <li class="nav-item active"><a href="#"><i class="fas fa-file-alt"></i><span class="menu-text">Posts</span></a></li>
+        <li class="nav-item"><a href="#"><i class="fas fa-play "></i><span class="menu-text">Media</span></a></li>--> 
+        <li class="nav-item"><a href="#"><i class="fas fa-sign-out-alt"></i><span class="menu-text">exit</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>$(function() {
+    $("li").click(function(e) {
+      e.preventDefault();
+      $("li").removeClass("active");
+      $(this).addClass("active");
+    });
+});</script>
