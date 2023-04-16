@@ -1,14 +1,26 @@
 
-.content {
+.content  {
 
 
     text-align: center;
     margin: 0 auto;
     display:flex;
     justify-content: center;
-    margin-top: -870px;
+    margin-top: 0px;
 }
 
+.date {
+
+    text-align: center;
+
+    display:flex;
+
+    justify-content: center;
+
+    padding-top: 245px;
+    padding-left: -200px;
+    margin-left: -400px;
+}
 h2{
 
     text-align: center;
@@ -59,5 +71,5 @@ thead th {
 }
 
 tr:nth-child(even) {
-    background: #9EDFD3;
+  /*  background: ;*/
 }

@@ -1,0 +1,55 @@
+
+<div class="content">
+    
+          <div class="lista">
+
+            <table>
+            <thead>
+
+                <tr>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Correo</th>
+                    <th>Direccion</th>
+        
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>  {{arrayEstudiantes[0].cedula }}</td>
+                    <td>  {{arrayEstudiantes[0].nombre }}</td>
+                    <td>  {{arrayEstudiantes[0].edad }} </td>
+                    <td>  {{arrayEstudiantes[0].correo }} </td>
+                    <td>  {{arrayEstudiantes[0].direccion }}</td>
+                </tr>
+                <tr>
+                    <td  [ngStyle]="{'background-color':arrayEstudiantes[0]%2==0?'red':'#9EDFD3'}">  {{arrayEstudiantes[1].cedula }}</td>
+                    <td  [ngStyle]="{'background-color':arrayEstudiantes[0]%2==0?'red':'#9EDFD3'}"  >  {{arrayEstudiantes[1].nombre }}</td>
+                    <td  [ngStyle]="{'background-color':arrayEstudiantes[0]%2==0?'red':'#9EDFD3'}">  {{arrayEstudiantes[1].edad }} </td>
+                    <td  [ngStyle]="{'background-color':arrayEstudiantes[0]%2==0?'red':'#9EDFD3'}">  {{arrayEstudiantes[1].correo }} </td>
+                    <td  [ngStyle]="{'background-color':arrayEstudiantes[0]%2==0?'red':'#9EDFD3'}">  {{arrayEstudiantes[1].direccion }}</td>
+                </tr>
+                <tr >
+                    <td>   {{arrayEstudiantes[2].cedula }}</td>
+                    <td>  {{arrayEstudiantes[2].nombre }}</td>
+                    <td>  {{arrayEstudiantes[2].edad }} </td>
+                    <td>  {{arrayEstudiantes[2].correo }} </td>
+                    <td>  {{arrayEstudiantes[2].direccion }}</td>
+                </tr>
+            </tbody>
+
+            </table>
+          
+         
+    
+          </div>
+          <div class="date"> {{ hoy | date : "short"}}</div>
+       
+         
+      
+      
+
+</div>
+
+
