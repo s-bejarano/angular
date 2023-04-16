@@ -18,9 +18,6 @@ export class NavbarComponent {
   navData = []
 
 
-
- 
-
 cli() {
 
   

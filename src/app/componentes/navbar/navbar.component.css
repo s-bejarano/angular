@@ -1,37 +1,4 @@
-/*html, body {
-    height: 100%;
-}
-body{
-    font-family: Poppins;
-  /*  background-image: url("");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
 
-.burger, .menu, .backgraund {
-    position: fixed;
-}
-
-.burger {
-
-    z-index: 4;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 88px;
-    height: 88px;
-  /*  background-image: url("");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-body.open .burger {
-
-   /* background-image: url("");
-}
-*/
 
 @import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
