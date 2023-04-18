@@ -12,26 +12,40 @@ import { DashboardHComponent } from './componentes/dashboard/dashboard-h/dashboa
 
 /* imports de angular material */
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { Router, Routes,  RouterModule } from '@angular/router';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {HttpClientModule} from '@angular/common/http';
+import { Router, Routes, RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 import { SidebarModule } from 'ng-sidebar';
+import { LoginComponent } from './componentes/login/login.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AppRoutingModule } from './app-routing.module';
+
+const routes: Routes = [
 
 
-
-const routes: Routes  = [
-
-  /*{path:'',component: NavbarComponent},*/
-  { path: "dashboard-h", component: DashboardHComponent },
-  { path: "estudiantes", component: StudentContentComponent},
-  { path: "clases", component: ClasesContentComponent },
-  { path: "cursos", component: CursosContentComponent }
+  { path: "login", component: LoginComponent },
+  { path: "",redirectTo: 'login', pathMatch: 'full'},
  
- ];
+  /* { path: "**",redirectTo: 'login', pathMatch: 'full'},
+    { path: "",redirectTo: 'login', pathMatch: 'full'},
+  { path: "**",redirectTo: 'login', pathMatch: 'full'},
+  {path:'',component: NavbarComponent},*/
+  { path: "navbar", component: NavbarComponent },
+  { path: "dashboard-h", component: DashboardHComponent },
+  { path: "estudiantes", component: StudentContentComponent },
+  { path: "clases", component: ClasesContentComponent },
+  { path: "cursos", component: CursosContentComponent },
+  
+
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,8 +54,9 @@ const routes: Routes  = [
     StudentContentComponent,
     ClasesContentComponent,
     CursosContentComponent,
-    DashboardHComponent, 
-   
+    DashboardHComponent,
+    LoginComponent,
+
 
 
   ],
@@ -50,16 +65,21 @@ const routes: Routes  = [
     MatSlideToggleModule,
     MatToolbarModule,
     MatIconModule,
-    /**
-    MaterialExampleModule, 
-    ToolbarBasicExample, */
-    FormsModule, 
+
+    FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
     HttpClientModule,
-    
+
     RouterModule.forRoot(routes),
-  
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    AppRoutingModule
+
 
   ],
   providers: [],
