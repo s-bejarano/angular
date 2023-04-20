@@ -10,23 +10,14 @@ import { CursosContentComponent } from './componentes/dashboard/cursos-content/c
 import { DashboardHComponent } from './componentes/dashboard/dashboard-h/dashboard-h.component';
 
 
-/* imports de angular material */
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+
 import { Router, Routes, RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material/core';
-import { HttpClientModule } from '@angular/common/http';
-import { SidebarModule } from 'ng-sidebar';
+
 import { LoginComponent } from './componentes/login/login.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { AppRoutingModule } from './app-routing.module';
+
+import { AppRoutingModule } from './modulos/app-routing.module';
+import { AngularMaterialModuleModule } from './modulos/angular-material-module.module';
 
 const routes: Routes = [
 
@@ -55,30 +46,12 @@ const routes: Routes = [
     ClasesContentComponent,
     CursosContentComponent,
     DashboardHComponent,
-    LoginComponent,
-
-
-
-  ],
+      ],
   imports: [
     BrowserModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    MatIconModule,
-
-    FormsModule,
-    ReactiveFormsModule,
-    MatNativeDateModule,
-    HttpClientModule,
-
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    MatProgressSpinnerModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularMaterialModuleModule
 
 
   ],
