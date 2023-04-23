@@ -20,17 +20,17 @@ export class NavbarComponent {
   navData = []
 
 
-cli() {
-
-  
-}
+  cli() {
 
 
+  }
 
- toggleSidebar() {
-  this.opened = !this.opened;
-}
 
- 
-  
+
+  toggleSidebar() {
+    this.opened = !this.opened;
+  }
+
+
+
 }

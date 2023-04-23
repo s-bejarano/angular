@@ -1,27 +1,25 @@
+<div class="container">
+  <nav class="side-nav">
+    <ul class="nav-menu">
 
 
-  <div class="container">
-    <nav class="side-nav">
-      <ul class="nav-menu">
+      <li class="nav-item"><a routerLink="/navbar"><i class="fas fa-tachometer-alt"></i><span
+            class="menu-text">Dashboard</span></a>
 
-        
-        <li routerLink="/dashboard-h" class="nav-item"><a href="#"><i class="fas fa-tachometer-alt"></i><span class="menu-text">Dashboard</span></a>
-        
-        </li>
-        <li class="nav-item"><a href="#"><i class="fas fa-user"></i><span class="menu-text">Usuario</span></a></li>
-       <!--  <li class="nav-item active"><a href="#"><i class="fas fa-file-alt"></i><span class="menu-text">Posts</span></a></li>
-        <li class="nav-item"><a href="#"><i class="fas fa-play "></i><span class="menu-text">Media</span></a></li>--> 
-        <li class="nav-item"><a routerLink="/login" href="#"><i class="fas fa-sign-out-alt"></i><span class="menu-text">exit</span></a></li>
-      </ul>
-    </nav>
-  </div>
+      </li>
+      <li class="nav-item"><a href="#"><i class="fas fa-user"></i><span class="menu-text">Usuario</span></a></li>
+      <!--  <li class="nav-item active"><a href="#"><i class="fas fa-file-alt"></i><span class="menu-text">Posts</span></a></li>
+        <li class="nav-item"><a href="#"><i class="fas fa-play "></i><span class="menu-text">Media</span></a></li>-->
+      <li class="nav-item"><a routerLink="/login" href="#"><i class="fas fa-sign-out-alt"></i><span
+            class="menu-text">exit</span></a></li>
+    </ul>
+  </nav>
+</div>
 
-  <script>$(function() {
-    $("li").click(function(e) {
+<script>$(function () {
+    $("li").click(function (e) {
       e.preventDefault();
       $("li").removeClass("active");
       $(this).addClass("active");
     });
-});</script>
-
-
+  });</script>

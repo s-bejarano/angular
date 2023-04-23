@@ -22,19 +22,26 @@ import { AngularMaterialModuleModule } from './modulos/angular-material-module.m
 const routes: Routes = [
 
 
+  { path: "", redirectTo: 'login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
-  { path: "",redirectTo: 'login', pathMatch: 'full'},
+
+  /*
+    { path: "",redirectTo: 'login', pathMatch: 'full'},
  
-  /* { path: "**",redirectTo: 'login', pathMatch: 'full'},
+  { path: "**",redirectTo: 'login', pathMatch: 'full'},
     { path: "",redirectTo: 'login', pathMatch: 'full'},
   { path: "**",redirectTo: 'login', pathMatch: 'full'},
-  {path:'',component: NavbarComponent},*/
-  { path: "navbar", component: NavbarComponent },
-  { path: "dashboard-h", component: DashboardHComponent },
+  {path:'',component: NavbarComponent},
+    { path: "dashboard-h", component: DashboardHComponent },
   { path: "estudiantes", component: StudentContentComponent },
   { path: "clases", component: ClasesContentComponent },
   { path: "cursos", component: CursosContentComponent },
-  
+  {path: "crear-estudiante", component: CrearEstudianteComponent},  
+
+  */
+  { path: "navbar", component: NavbarComponent },
+
+
 
 ];
 @NgModule({
@@ -42,11 +49,12 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     ToolbarComponent,
-    StudentContentComponent,
+    // StudentContentComponent,
     ClasesContentComponent,
     CursosContentComponent,
     DashboardHComponent,
-      ],
+    // CrearEstudianteComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),

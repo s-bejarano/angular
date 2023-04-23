@@ -1,26 +1,27 @@
-
-.content  {
+.content {
 
 
     text-align: center;
-    margin: 0 auto;
-    display:flex;
+    margin: 10% auto;
+    display: flex;
     justify-content: center;
     margin-top: 0px;
+
 }
 
-.date {
+.mat-elevation-z8 {
 
-    text-align: center;
+    box-shadow: none;
 
-    display:flex;
-
-    justify-content: center;
-
-    padding-top: 245px;
-    padding-left: -200px;
-    margin-left: -400px;
 }
+
+.pag {
+    margin-left: 230px;
+    display: flex;
+}
+
+/*
+
 h2{
 
     text-align: center;
@@ -37,20 +38,7 @@ h2{
     box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
 }
 
-table {
 
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-    background-color: white;
-    border: 1px solid #1A2929;
-
-}
 
 td, th {
 
@@ -71,5 +59,78 @@ thead th {
 }
 
 tr:nth-child(even) {
-  /*  background: ;*/
+  /*  background: ;
+  
+  
+}
+
+
+*/
+.date {
+
+
+
+    margin-top: -25px;
+
+    margin-left: 450px;
+}
+
+table {
+
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    border: 0px solid #bcc4c4;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+
+    margin-left: 5%;
+}
+
+th {
+
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.pointer {
+
+    cursor: pointer;
+
+}
+
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+    margin-left: 45px;
+}
+
+.info {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -300px;
+}
+
+
+.btn-a {
+
+
+    margin-left: 755px;
+    display: inline;
+    margin-top: 10px;
+}
+
+a {
+
+    list-style: none;
+
 }
