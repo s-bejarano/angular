@@ -1,0 +1,86 @@
+<div class="content">
+
+    <mat-card style="margin-top: 5px;">
+        <mat-card-content>Simple card
+
+            <form [formGroup]="form" (ngSubmit)="agregarEditarClase()">
+
+                <h2>{{ accion }} Clase</h2>
+                <mat-grid-list cols="4" rowHeight="70px">
+
+
+
+
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>Id</mat-label>
+                            <input matInput formControlName="id">
+                        </mat-form-field>
+                    </mat-grid-tile>
+
+
+
+                    <mat-grid-tile [colspan]="3" [rowspan]="6">
+                        <img src="./../../../../../assets/img/clase.png" width="250" height="250" alt="">
+                    </mat-grid-tile>
+
+
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+
+                        <mat-form-field class="ancho">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput formControlName="Nombre">
+                        </mat-form-field>
+
+                    </mat-grid-tile>
+
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+
+                        <mat-form-field class="ancho">
+                            <mat-label>Cantidad Horas</mat-label>
+                            <input matInput formControlName="CantidadHoras">
+                        </mat-form-field>
+
+                    </mat-grid-tile>
+
+
+
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+
+                        <mat-form-field class="ancho">
+                            <mat-label>Cantidad Clases</mat-label>
+                            <input matInput formControlName="CantidadClases">
+                        </mat-form-field>
+
+                    </mat-grid-tile>
+
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+
+                        <mat-form-field class="ancho">
+                            <mat-label>Profesor</mat-label>
+                            <input matInput formControlName="Profesor">
+                        </mat-form-field>
+
+                    </mat-grid-tile>
+
+
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <button type="submit" mat-raised-button style="margin-right: 20px;" routerLink="/clases">
+                            Volver</button>
+                        <button type="submit" [disabled]="form.invalid" mat-raised-button
+                            color="primary">Aceptar</button>
+                    </mat-grid-tile>
+
+
+                </mat-grid-list>
+
+
+            </form>
+
+
+
+        </mat-card-content>
+    </mat-card>
+
+
+</div>

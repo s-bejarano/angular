@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
@@ -8,16 +7,11 @@ import { StudentContentComponent } from './componentes/dashboard/student-content
 import { ClasesContentComponent } from './componentes/dashboard/clases-content/clases-content.component';
 import { CursosContentComponent } from './componentes/dashboard/cursos-content/cursos-content.component';
 import { DashboardHComponent } from './componentes/dashboard/dashboard-h/dashboard-h.component';
-
-
-
-
 import { Router, Routes, RouterModule } from '@angular/router';
-
 import { LoginComponent } from './componentes/login/login.component';
-
 import { AppRoutingModule } from './modulos/app-routing.module';
 import { AngularMaterialModuleModule } from './modulos/angular-material-module.module';
+import { CrearEditarComponent } from './componentes/dashboard/clases-content/crear-editar-clases/crear-editar.component';
 
 const routes: Routes = [
 
@@ -50,9 +44,10 @@ const routes: Routes = [
     NavbarComponent,
     ToolbarComponent,
     // StudentContentComponent,
-    ClasesContentComponent,
+   // ClasesContentComponent,
     CursosContentComponent,
     DashboardHComponent,
+    //CrearEditarComponent,
     // CrearEstudianteComponent,
   ],
   imports: [

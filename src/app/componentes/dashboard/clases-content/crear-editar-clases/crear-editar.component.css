@@ -1,0 +1,17 @@
+
+.content  {
+
+
+    text-align: center;
+    margin: 25px 550px;
+    /*display: flex; */
+    justify-content: center;
+    margin-top: 0px;
+
+   
+}
+
+.ancho {
+
+    width: 95%;
+}

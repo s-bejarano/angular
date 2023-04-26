@@ -19,7 +19,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppModule } from '../app.module';
 import { RouterModule, Routes } from '@angular/router';
 import { ClasesContentComponent } from '../componentes/dashboard/clases-content/clases-content.component';
@@ -30,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CrearEstudianteComponent } from '../componentes/dashboard/student-content/crear-estudiante/crear-estudiante.component';
+import { CrearEditarComponent } from '../componentes/dashboard/clases-content/crear-editar-clases/crear-editar.component';
 
 
 const routes: Routes = [
@@ -41,10 +41,13 @@ const routes: Routes = [
       { path: "dashboard-h", component: DashboardHComponent },
       { path: "estudiantes", component: StudentContentComponent },
       { path: "clases", component: ClasesContentComponent },
+      { path: "crear-clases", component: CrearEditarComponent },
+      { path: "crear-clases/:id", component: CrearEditarComponent },
       { path: "cursos", component: CursosContentComponent },
       { path: "crear-estudiante", component: CrearEstudianteComponent },
-      { path: "crear-estudiante/:id", component: CrearEstudianteComponent }
-    ]
+      { path: "crear-estudiante/:id", component: CrearEstudianteComponent },
+   
+    ] 
   },]
 
 @NgModule({
@@ -52,7 +55,8 @@ const routes: Routes = [
     LoginComponent,
     StudentContentComponent,
     CrearEstudianteComponent,
-
+    ClasesContentComponent,
+    CrearEditarComponent
   ],
   imports: [
     CommonModule,
