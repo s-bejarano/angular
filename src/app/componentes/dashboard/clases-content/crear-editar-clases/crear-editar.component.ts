@@ -107,6 +107,7 @@ export class CrearEditarComponent implements OnExit{
   }
 
   agregarClase(clase: Clases) {
+    
       this._ClasesService.addClase(clase).subscribe(data => {
         this.mensajeExito('registrada');
         this.router.navigate(['/clases']);
