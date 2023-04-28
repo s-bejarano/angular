@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { estudiantes } from 'src/app/interfaces/estudiantes';
 import { EstudiantesService } from 'src/app/services/estudiantes.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-
+import { OnExit } from '../../../../guards/salida-formularios.guard'
 
 @Component({
   selector: 'app-crear-estudiante',
@@ -16,7 +16,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 
-export class CrearEstudianteComponent {
+export class CrearEstudianteComponent implements OnExit {
 
 
   form: FormGroup;
@@ -52,6 +52,17 @@ export class CrearEstudianteComponent {
       this.accion = 'Editar';
       this.esEditar();
     }
+  }
+
+  OnExit() {
+    if(this.form.dirty) {
+      const rta = confirm("Esta seguro que desea salir?")
+    return rta;
+
+    }
+
+    return true;
+    
   }
 
 

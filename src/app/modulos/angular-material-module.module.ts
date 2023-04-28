@@ -38,6 +38,7 @@ import { environment } from 'src/environments/environment';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { InscricpionesState } from '../componentes/store/inscripciones.state';
+import { SalidaFormulariosGuard } from '../guards/salida-formularios.guard'
 
 const routes: Routes = [
 
@@ -48,10 +49,16 @@ const routes: Routes = [
       { path: "dashboard-h", component: DashboardHComponent },
       { path: "estudiantes", component: StudentContentComponent },
       { path: "clases", component: ClasesContentComponent },
-      { path: "crear-clases", component: CrearEditarComponent },
+      { path: "crear-clases",
+      canDeactivate: [SalidaFormulariosGuard],
+      component: CrearEditarComponent 
+    
+      },
       { path: "crear-clases/:id", component: CrearEditarComponent },
       { path: "cursos", component: CursosContentComponent },
-      { path: "crear-estudiante", component: CrearEstudianteComponent },
+      { path: "crear-estudiante", 
+      canDeactivate: [SalidaFormulariosGuard],
+      component: CrearEstudianteComponent },
    
       { path: "crear-estudiante/:id", component: CrearEstudianteComponent },
    

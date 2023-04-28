@@ -55,7 +55,7 @@ export class ClasesContentComponent {
 
     this._ClasesService.listaClases().subscribe( data =>{
 
-      console.log(data);
+      //console.log(data);
       this.dataSource.data = data;
       
     });

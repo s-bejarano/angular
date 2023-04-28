@@ -4,14 +4,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClasesService } from 'src/app/services/clases.service';
 import { Clases } from 'src/app/interfaces/clases';
-
+import { OnExit } from '../../../../guards/salida-formularios.guard'
 
 @Component({
   selector: 'app-crear-editar',
   templateUrl: './crear-editar.component.html',
   styleUrls: ['./crear-editar.component.css']
 })
-export class CrearEditarComponent {
+export class CrearEditarComponent implements OnExit{
 
 
 
@@ -43,6 +43,19 @@ export class CrearEditarComponent {
       this.obtenerClase(this.id)
     }
   }
+
+  OnExit() {
+    if(this.form.dirty) {
+      const rta = confirm("Esta seguro que desea salir?");
+    return rta;
+
+    }
+
+    return true;
+    
+  }
+
+
 
 
 /*
@@ -87,7 +100,7 @@ export class CrearEditarComponent {
     this.loading = true;
     this._ClasesService.updateClase(id, clase).subscribe(() => {
       this.loading = false;
-      console.log('llegue')
+     
       this.mensajeExito('actualizada');
       this.router.navigate(['/clases']);
     })
