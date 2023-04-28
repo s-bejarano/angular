@@ -1,0 +1,19 @@
+<div class="card mb-2" *ngFor="let inscripcion of inscripciones$ | async">
+
+    <div class="card-body">
+        <h4>Inscripcion</h4>
+        <h4>ID de inscripcion: {{inscripcion.id}}</h4>
+        <h4>ID de alumno: {{inscripcion.id_alumno}}</h4>
+        <h4>ID de clase: {{inscripcion.id_clase }}</h4>
+        <h4>Fecha de inscripcion: {{inscripcion.fecha}}</h4>
+        <em>En este apartado podra eliminar la inscripcion realizada</em>
+        <div class="d-grid gap-2 mt-2">
+            <button class="btn btn-danger" (click)="eliminarInscripcion(inscripcion.id)">
+                Eliminar inscripcion
+            </button>
+        </div>
+       
+    </div>
+
+</div>
+<h2 *ngIf="(inscripciones$ | async)?.length == 0">No hay inscripciones para mostrar</h2>

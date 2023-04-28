@@ -30,11 +30,18 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CrearEstudianteComponent } from '../componentes/dashboard/student-content/crear-estudiante/crear-estudiante.component';
 import { CrearEditarComponent } from '../componentes/dashboard/clases-content/crear-editar-clases/crear-editar.component';
-
+import { AuthGuard } from '../guards/auth.guard';
+import { CrearEditarCursosComponent } from '../componentes/dashboard/cursos-content/crear-editar-cursos/crear-editar-cursos.component';
+import { ListarInscripcionComponent } from '../componentes/dashboard/cursos-content/listar-inscripcion/listar-inscripcion.component';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { InscricpionesState } from '../componentes/store/inscripciones.state';
 
 const routes: Routes = [
 
-  { path: "", redirectTo: 'login', pathMatch: 'full' },
+  { path: "", redirectTo: 'login', pathMatch: 'full'},
 
   {
     path: "", component: NavbarComponent, children: [
@@ -45,6 +52,7 @@ const routes: Routes = [
       { path: "crear-clases/:id", component: CrearEditarComponent },
       { path: "cursos", component: CursosContentComponent },
       { path: "crear-estudiante", component: CrearEstudianteComponent },
+   
       { path: "crear-estudiante/:id", component: CrearEstudianteComponent },
    
     ] 
@@ -56,7 +64,10 @@ const routes: Routes = [
     StudentContentComponent,
     CrearEstudianteComponent,
     ClasesContentComponent,
-    CrearEditarComponent
+    CrearEditarComponent,
+    CursosContentComponent,
+    CrearEditarCursosComponent,
+    ListarInscripcionComponent,
   ],
   imports: [
     CommonModule,
@@ -81,7 +92,11 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MatCardModule,
     MatGridListModule,
-
+    NgxsModule.forRoot([InscricpionesState], {
+      developmentMode: !environment
+    }),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsLoggerPluginModule.forRoot()
 
   ],
   exports: [

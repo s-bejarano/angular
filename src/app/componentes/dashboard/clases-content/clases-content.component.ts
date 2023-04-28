@@ -8,6 +8,7 @@ import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import { outputAst } from '@angular/compiler';
 import { MatInput } from '@angular/material/input';
+import { HttpClientTestingModule }from '@angular/common/http/testing'
 
 @Component({
   selector: 'app-clases-content',

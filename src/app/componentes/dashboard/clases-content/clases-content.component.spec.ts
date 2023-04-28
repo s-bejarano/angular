@@ -1,14 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClasesContentComponent } from './clases-content.component';
+import { HttpClientTestingModule }from '@angular/common/http/testing'
 
-describe('ClasesContentComponent', () => {
+
+fdescribe('ClasesContentComponent', () => {
   let component: ClasesContentComponent;
   let fixture: ComponentFixture<ClasesContentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClasesContentComponent ]
+      declarations: [ ClasesContentComponent ],
+      imports : [
+        HttpClientTestingModule
+
+      ]
     })
     .compileComponents();
 

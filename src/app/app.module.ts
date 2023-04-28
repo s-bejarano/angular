@@ -12,6 +12,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { AppRoutingModule } from './modulos/app-routing.module';
 import { AngularMaterialModuleModule } from './modulos/angular-material-module.module';
 import { CrearEditarComponent } from './componentes/dashboard/clases-content/crear-editar-clases/crear-editar.component';
+import { AuthGuard } from './guards/auth.guard';
+import { CrearEditarCursosComponent } from './componentes/dashboard/cursos-content/crear-editar-cursos/crear-editar-cursos.component';
+import { ListarInscripcionComponent } from './componentes/dashboard/cursos-content/listar-inscripcion/listar-inscripcion.component';
 
 const routes: Routes = [
 
@@ -45,8 +48,10 @@ const routes: Routes = [
     ToolbarComponent,
     // StudentContentComponent,
    // ClasesContentComponent,
-    CursosContentComponent,
+   // CursosContentComponent,
     DashboardHComponent,
+   // ListarInscripcionComponent,
+   // CrearEditarCursosComponent,
     //CrearEditarComponent,
     // CrearEstudianteComponent,
   ],
